@@ -1,0 +1,25 @@
+body {
+  min-height: 200vh;
+}
+nav {
+  box-shadow: 0 0 0.5rem gray;
+  background-color: rgb(140, 140, 173);
+  position: sticky;
+  bottom: 1rem;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+li {
+  list-style-type: none;
+}
+nav a {
+  padding: 1rem;
+  display: inline-block;
+  text-decoration: none;
+}
+a:hover {
+  color: aqua;
+}
