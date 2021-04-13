@@ -7,9 +7,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpComponent implements OnInit {
 
+  model: Order = new Order();
+  submitted = false
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  onSubmit() {
+
+    console.log(this.model);
+
+  }
+
+}
+
+
+export class Order {
+
+  firstname: Text;
+
+  lastname: Text;
+
+  date: Date;
+
+  email: string;
+
+  password : string;
 
 }

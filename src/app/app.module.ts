@@ -5,6 +5,7 @@ import { MenuComponent, route } from './menu/menu.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import {RouterModule} from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -17,7 +18,8 @@ import {RouterModule} from '@angular/router';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(route)
+    RouterModule.forRoot(route),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

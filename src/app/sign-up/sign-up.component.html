@@ -1,1 +1,77 @@
-<p>sign-up works!</p>
+<section class="flex-container">
+    <p>Veuillez vous connecter</p>
+    
+    <form class=".form"(ngSubmit)="onSubmit()" #sign="ngForm">
+
+    <div>
+  
+        <label for="firstname-order">Prénom</label>
+    
+        <input name="firstname-order" type="text" [(ngModel)]="model.firstname" #firstname="ngModel" required minlength="3" maxlength="15"/>
+    
+    </div>
+    <div *ngIf="sign.submitted && firstname.errors">
+  
+        <span *ngIf="firstname.errors?.required">Le prénom est requis</span>
+    
+        <span *ngIf="firstname.errors?.minlength">Le prénom doit comporter au moins 3 caractères</span>
+    
+        <span *ngIf="firstname.errors?.maxlength">Le prénom ne doit pas dépasser 15 caractères</span>
+    
+    </div>
+
+    <div>
+  
+        <label for="lastname-order">Nom</label>
+    
+        <input name="lastname-order" type="text" [(ngModel)]="model.lastname" #lastname="ngModel" required minlength="3" maxlength="15"/>
+    
+    </div>
+    <div *ngIf="sign.submitted && lastname.errors">
+  
+        <span *ngIf="lastname.errors?.required">Le nom est requis</span>
+    
+        <span *ngIf="lastname.errors?.minlength">Le nom doit comporter au moins 3 caractères</span>
+    
+        <span *ngIf="lastname.errors?.maxlength">Le nom ne doit pas dépasser 15 caractères</span>
+    
+    </div>
+
+
+    <div>
+  
+        <label for="email-order">Email</label>
+    
+        <input name="email-order" type="email" [(ngModel)]="model.email" #email="ngModel" required email>
+    
+    </div>
+    <div *ngIf="sign.submitted && email.errors">
+    
+        <span *ngIf="email.errors.required">Le champ email est requis</span>
+    
+        <span *ngIf="email.errors.email">L'email est invalide</span>
+    
+    </div>
+
+
+    <div>
+        
+        <label for="password-order">Password</label>
+        <input name="password-order" type="password" [(ngModel)]="model.password" #password="ngModel" required email>
+
+    </div>
+    <div *ngIf="sign.submitted && password.errors">
+
+        <span *ngIf="password.errors.required">Le mot de passe est requis</span>
+
+    </div>
+
+
+
+
+
+
+
+    <button [routerLink]="['/user-profile']"type="submit">Soumettre</button>
+</form>
+</section>

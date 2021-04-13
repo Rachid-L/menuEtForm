@@ -1,0 +1,37 @@
+body {
+  font-family: "trebuchet ms", sans-serif;
+  font-size: 90%;
+}
+
+form {
+  background-color: #fafafa;
+  padding: 10px;
+  width: 280px;
+  border: 1px groove #df3f3f;
+  box-shadow: 1px 1px 1px #d83f3d;
+}
+
+div {
+  padding: 0 20px 20px 20px;
+}
+button {
+  box-shadow: 1px 1px 1px #d83f3d;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+label {
+  margin-top: 10px;
+  display: block;
+}
+
+span {
+  color: red;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+}
